@@ -50,7 +50,7 @@ class mymqttskill(MycroftSkill):
         except Exception as e:
             LOGGER.info("Exception raised while publishing command: %s", e)
             self.speak_dialog("not.found", {"command": cmd_name, "action": act_name, "module": dev_name})
-        
+            raise
     def stop(self):
         pass
         
