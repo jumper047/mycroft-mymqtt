@@ -37,7 +37,7 @@ class mymqttskill(MycroftSkill):
         
         try:
             if (self.settings.get('mqttuser')):
-                self.mqttc.username_pw_set(self.settings['mqttuser'],self.setting['mqttpass'])
+                self.mqttc.username_pw_set(self.settings['mqttuser'],self.settings['mqttpass'])
             if (self.settings.get('mqttca')):
                 self.mqttc.tls_set(self.settings['mqttca']) #/etc/ssl/certs/ca-certificates.crt
             LOGGER.info( "MQTT Connect: " + self.settings['mqtthost'] + ':' + str(self.settings['mqttport']) )
